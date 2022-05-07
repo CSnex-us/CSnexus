@@ -1,2 +1,2 @@
 # CSnexus
-Educational Platform for Computer Science
+Educational Platform for Computer Science Education
