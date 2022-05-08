@@ -32,22 +32,22 @@ for testNum in range(numTests):
     # TODO: Loop through the question bank, making a question for each.
     qBankLength = len(qBank)
     #for question in range(qBankLength):
-    for key in qBankShuffle:
-        print(qBank[key])
-    # for index, (key, value) in enumerate(qBank.items()):
-    #     correctAnswer = value[0]
-    #     incorrectAnswers = list(value[1:])
-    #     answersCount = len(incorrectAnswers)
+    # for key in qBankShuffle:
+    #     print(qBank[key])
+    for index, (key, value) in enumerate(qBank.items()):  # Neeed to modify this line - not sure if enumerate is the way to go.
+        correctAnswer = value[0]
+        incorrectAnswers = list(value[1:])
+        answersCount = len(incorrectAnswers)
 
-    #     selectedIncorrectAnswers = random.sample(incorrectAnswers, answersCount)
+        selectedIncorrectAnswers = random.sample(incorrectAnswers, answersCount)
 
-    #     answerOptions = selectedIncorrectAnswers + [correctAnswer]
+        answerOptions = selectedIncorrectAnswers + [correctAnswer]
 
-    #     quizFile.write(f'{index + 1}. {key} \n')
-    #     for i in range(answersCount +1 ):
-    #         quizFile.write(f"  {'ABCD'[i]}.  {answerOptions[i]}\n")
-    #     quizFile.write('\n')
-    #print(qBankLength)
+        quizFile.write(f'{index + 1}. {key} \n')
+        for i in range(answersCount +1 ):
+            quizFile.write(f"  {'ABCD'[i]}.  {answerOptions[i]}\n")
+        quizFile.write('\n')
+    print(qBankLength)
 
 
     quizFile.close()
